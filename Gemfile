@@ -14,6 +14,8 @@ gem "uglifier", ">= 1.3.0"
 
 gem "faker", "~> 1.8.4"
 
+gem "sidekiq"
+
 group :development, :test do
   gem "byebug", platform: :mri
 
