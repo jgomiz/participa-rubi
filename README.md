@@ -1,12 +1,12 @@
-# decidim_rubi
+# Decidim Rubi
 
 Citizen Participation and Open Government application.
 
 This is the open-source repository for decidim_rubi, based on [Decidim](https://github.com/decidim/decidim).
 
-## Deploying the app
+## Getting started
 
-An opinionated guide to deploy this app to Heroku can be found at [https://github.com/codegram/decidim-deploy-heroku](https://github.com/codegram/decidim-deploy-heroku).
+`bin/setup`
 
 ## Setting up the application
 
