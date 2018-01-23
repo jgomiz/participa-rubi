@@ -16,6 +16,8 @@ gem "faker", "~> 1.8.4"
 
 gem "sidekiq"
 
+gem "fog-aws"
+
 group :development, :test do
   gem "byebug", platform: :mri
 
