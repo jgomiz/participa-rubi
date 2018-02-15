@@ -542,6 +542,8 @@ GEM
     selenium-webdriver (3.9.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
+    sentry-raven (2.7.2)
+      faraday (>= 0.7.6, < 1.0)
     sidekiq (5.0.5)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
@@ -627,6 +629,7 @@ DEPENDENCIES
   pry-byebug
   puma (~> 3.0)
   rubocop
+  sentry-raven
   sidekiq
   spring
   spring-watcher-listen (~> 2.0.0)
