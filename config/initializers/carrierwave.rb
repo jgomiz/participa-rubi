@@ -2,15 +2,15 @@
 
 if Rails.env.production?
   CarrierWave.configure do |config|
-    config.fog_provider = 'fog/aws'
+    config.fog_provider = "fog/aws"
     config.fog_credentials = {
-      provider:              'AWS',
+      provider:              "AWS",
       aws_access_key_id:     Rails.application.secrets.aws_access_key_id,
       aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
-      region:                'eu-west-1'
+      region:                "eu-west-1"
     }
-    config.fog_directory  = 'decidim-rubi'
-    config.fog_attributes = { 'Cache-Control' => "max-age=#{365.day.to_i}" }
+    config.fog_directory = "decidim-rubi"
+    config.fog_attributes = { "Cache-Control" => "max-age=#{365.days.to_i}" }
     config.storage = :fog
   end
 else

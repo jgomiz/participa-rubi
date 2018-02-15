@@ -19,13 +19,14 @@ gem "sidekiq"
 gem "fog-aws"
 
 group :development, :test do
-  gem "pry-byebug", platform: :mri
   gem "decidim-dev", "0.9.2"
+  gem "pry-byebug", platform: :mri
 end
 
 group :development do
   gem "letter_opener_web", "~> 1.3.0"
   gem "listen", "~> 3.1.0"
+  gem "rubocop"
   gem "spring"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console"
