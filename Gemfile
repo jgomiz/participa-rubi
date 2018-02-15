@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", "0.8.3"
+gem "decidim", "0.9.2"
 
 # Uncomment the following line if you want to use decidim-assemblies plugin
 # gem "decidim-assemblies", "0.8.3"
@@ -19,9 +19,8 @@ gem "sidekiq"
 gem "fog-aws"
 
 group :development, :test do
-  gem "byebug", platform: :mri
-
-  gem "decidim-dev", "0.8.3"
+  gem "pry-byebug", platform: :mri
+  gem "decidim-dev", "0.9.2"
 end
 
 group :development do
