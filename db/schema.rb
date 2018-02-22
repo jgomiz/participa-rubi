@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180215102124) do
+ActiveRecord::Schema.define(version: 20180222111515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -417,6 +417,7 @@ ActiveRecord::Schema.define(version: 20180215102124) do
     t.jsonb "highlighted_content_banner_action_subtitle"
     t.string "highlighted_content_banner_action_url"
     t.string "highlighted_content_banner_image"
+    t.boolean "http_basic_authentication_protected", default: false
     t.index ["host"], name: "index_decidim_organizations_on_host", unique: true
     t.index ["name"], name: "index_decidim_organizations_on_name", unique: true
   end
