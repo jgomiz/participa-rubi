@@ -1,0 +1,18 @@
+es:
+  activemodel:
+    attributes:
+      ws_authorization_handler:
+        document_number: Número de documento de identidad (con letra)
+    errors:
+      models:
+        ws_authorization_handler:
+          attributes:
+            document_number:
+              invalid: No hemos encontrado este documento de identidad en el registro de participación
+  decidim:
+    authorization_handlers:
+      ws_authorization_handler:
+        name: "Registro de participación"
+        explanation: Valídate en el registro de Participación del Ajuntament de Rubí para participar en la plataforma.
+      participation_registry:
+        name: 'Registro de participación'

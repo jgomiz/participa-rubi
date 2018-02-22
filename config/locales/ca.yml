@@ -1,0 +1,22 @@
+ca:
+  activemodel:
+    attributes:
+      ws_authorization_handler:
+        document_number: Número de document d'identitat (amb lletra)
+    errors:
+      models:
+        ws_authorization_handler:
+          attributes:
+            document_number:
+              invalid: No hem trobat aquest document d'identitat al Registre de participació
+  decidim:
+    authorization_handlers:
+      ws_authorization_handler:
+        name: "Registre de participació"
+        explanation: Valida't contra el Registre de participació de l'Ajuntament de Rubí per participar en la plataforma.
+      participation_registry:
+        name: 'Registre de participació'
+  devise:
+    failure:
+      user:
+        not_found_in_database: "Correu electrònic o contrasenya no vàlida."
