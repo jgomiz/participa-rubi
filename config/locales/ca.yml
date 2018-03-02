@@ -16,6 +16,32 @@ ca:
         explanation: Valida't contra el Registre de participació de l'Ajuntament de Rubí per participar en la plataforma.
       participation_registry:
         name: 'Registre de participació'
+    features:
+      surveys:
+        name: 'Qüestionari participatiu'
+    surveys:
+      admin:
+        surveys:
+          form:
+            already_answered_warning: El qüestionari ja està contestat per alguns usuaris i per tant no pots modificar les seves preguntes.
+          update:
+            invalid: Hi ha hagut errors en desar el qüestionari.
+            success: Qüestionari desat correctament.
+      surveys:
+        answer:
+          invalid: Hi ha hagut errors en respondre al qüestionari.
+          success: Qüestionari respost correctament.
+        show:
+          answer_survey:
+            anonymous_user_message: <a href="%{sign_in_link}">Entra amb el teu compte</a> o <a href="%{sign_up_link}">dona't d'alta</a> per contestar el qüestionari participatiu.
+            title: Respon al qüestionari
+          survey_answered:
+            body: Ja has respost a aquest qüestionari.
+            title: Qüestionari respost
+          survey_closed:
+            body: El qüestionari està tancat i no s'hi pot participar.
+            title: Qüestionari tancat
+          tos_agreement: En participar en aquest qüestionari participatiu acceptes els Termes de Servei
   devise:
     failure:
       user:
