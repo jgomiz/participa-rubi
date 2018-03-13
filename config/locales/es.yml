@@ -42,3 +42,6 @@ es:
             body: El cuestionario está cerrado y no se puede responder.
             title: Cuestionario cerrado
           tos_agreement: Al participar en este cuestionario participativo, aceptas sus términos de servicio
+    core:
+      actions:
+        unauthorized: No tienes permiso para realizar esta acción. Para poder realizarla, ve a Autorizaciones dentro de Mi Cuenta y verifica tu perfil con el Registro de Participación.
