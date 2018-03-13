@@ -42,6 +42,9 @@ ca:
             body: El qüestionari està tancat i no s'hi pot participar.
             title: Qüestionari tancat
           tos_agreement: En participar en aquest qüestionari participatiu acceptes els Termes de Servei
+    core:
+      actions:
+        unauthorized:  No tens permís per realitzar aquesta acció. Per poder fer-ho, ves a Autoritzacions dins del meu compte i verifiqueu el vostre perfil amb el Registre de Participació.
   devise:
     failure:
       user:
