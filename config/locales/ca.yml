@@ -45,6 +45,11 @@ ca:
     core:
       actions:
         unauthorized:  No tens permís per realitzar aquesta acció. Per poder fer-ho, ves a Autoritzacions dins del meu compte i verifiqueu el vostre perfil amb el Registre de Participació.
+  ws_authorization:
+    form:
+      error_instructions: '<p>Vosté no està inscrit al Registre de Participació. Per poder participar als processos de participació t’has de registrar primer al Registre de Participació de l’Ajuntament de Rubí.</p>
+      <p><a href="https://www.e-ajrubi.net/eParticipa/Products/Carpeta/Public/Requests/InetReqPublic.aspx?TypeId=38317&AppScope=CIUDADANO&language=ca" target="_blank">Clica aquí per realitzar el registre.</a></p>
+      <p>Un cop l’hagis fet, se’t retornarà a aquesta pàgina i hauràs de tornar a escriure el teu DNI.</p>'
   devise:
     failure:
       user:
