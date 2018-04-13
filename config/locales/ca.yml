@@ -10,6 +10,11 @@ ca:
             document_number:
               invalid: No hem trobat aquest document d'identitat al Registre de participació
   decidim:
+    verifications:
+      authorizations:
+        first_login:
+          actions:
+            ws_authorization_handler: 'Registre de participació'
     authorization_handlers:
       ws_authorization_handler:
         name: "Registre de participació"

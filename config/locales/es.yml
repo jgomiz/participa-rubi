@@ -10,6 +10,11 @@ es:
             document_number:
               invalid: No hemos encontrado este documento de identidad en el registro de participación
   decidim:
+    verifications:
+      authorizations:
+        first_login:
+          actions:
+            ws_authorization_handler: 'Registre de participació'
     authorization_handlers:
       ws_authorization_handler:
         name: "Registro de participación"
