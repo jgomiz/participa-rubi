@@ -1,17 +1,7 @@
 <%= form.all_fields %>
 
-<% if form.object.errors.messages[:document_number].present? && controller_name != 'managed_users' %>
+<% if form.object.errors.messages[:document_number].present? && controller_name != 'impersonations' %>
   <div class="callout announcement secondary">
     <%= t('.error_instructions').html_safe %>
-  </div>
-<% end %>
-
-<%
-  # Unfortunately this is the only way to avoid rendering the submit button twice. One for the
-  # managed_users#new view and the other for the authorization handler view.
-%>
-<% if controller_name != 'managed_users' %>
-  <div class="actions partial-demo">
-    <%= form.submit t("decidim.verifications.authorizations.new.authorize"), class: "button expanded" %>
   </div>
 <% end %>

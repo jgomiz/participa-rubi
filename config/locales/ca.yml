@@ -9,6 +9,14 @@ ca:
           attributes:
             document_number:
               invalid: No hem trobat aquest document d'identitat al Registre de participació
+    models:
+      decidim/surveys/closed_survey_event: S'ha acabat el qüestionari participatiu
+      decidim/surveys/opened_survey_event: S'ha iniciat el qüestionari participatiu
+  activerecord:
+    models:
+      decidim/surveys/survey:
+        one: Qüestionari participatiu
+        other: Qüestionaris participatius
   decidim:
     verifications:
       authorizations:
@@ -21,9 +29,19 @@ ca:
         explanation: Valida't contra el Registre de participació de l'Ajuntament de Rubí per participar en la plataforma.
       participation_registry:
         name: 'Registre de participació'
-    features:
+    components:
       surveys:
         name: 'Qüestionari participatiu'
+    events:
+      surveys:
+        survey_closed:
+          email_intro: El qüestionari participatiu %{resource_title} a %{participatory_space_title} ha estat tancat.
+          email_subject: S'ha acabat un qüestionari participatiu a %{participatory_space_title}
+          notification_title: El qüestionari participatiu <a href="%{resource_path}">%{resource_title}</a> a <a href="%{participatory_space_url}">%{participatory_space_title}</a> ha acabat.
+        survey_opened:
+          email_intro: 'El qüestionari participatiu %{resource_title} a %{participatory_space_title} ja està obert. Pots participar-hi des d''aquesta pàgina:'
+          email_subject: Un nou qüestionari participatiu a %{participatory_space_title}
+          notification_title: El qüestionari participatiu <a href="%{resource_path}">%{resource_title}</a> en <a href="%{participatory_space_url}">%{participatory_space_title}</a> ja està obert.
     surveys:
       admin:
         surveys:
@@ -55,8 +73,3 @@ ca:
       error_instructions: '<p>Vosté no està inscrit al Registre de Participació. Per poder participar als processos de participació t’has de registrar primer al Registre de Participació de l’Ajuntament de Rubí.</p>
       <p><a href="https://www.e-ajrubi.net/eParticipa/Products/Carpeta/Public/Requests/InetReqPublic.aspx?TypeId=38317&AppScope=CIUDADANO&language=ca" target="_blank">Clica aquí per realitzar el registre.</a></p>
       <p>Un cop l’hagis fet, se’t retornarà a aquesta pàgina i hauràs de tornar a escriure el teu DNI.</p>'
-  devise:
-    failure:
-      user:
-        not_found_in_database: "Correu electrònic o contrasenya no vàlida."
-        invalid: "Correu electrònic o contrasenya no vàlida."
