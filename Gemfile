@@ -2,25 +2,23 @@
 
 source "https://rubygems.org"
 
-ruby RUBY_VERSION
+ruby "2.5.1"
 
-gem "decidim", "0.10.0"
+gem "decidim", "0.11.1"
 
 gem "puma", "~> 3.0"
 gem "uglifier", ">= 1.3.0"
 
 gem "savon", "~> 2.12.0"
 
-gem "faker", "~> 1.8.4"
-
+gem "fog-aws"
+gem "sentry-raven"
 gem "sidekiq"
 
-gem "fog-aws"
-
-gem "sentry-raven"
+gem "faker", "~> 1.8"
 
 group :development, :test do
-  gem "decidim-dev", "0.10.0"
+  gem "decidim-dev", "0.11.1"
   gem "dotenv-rails"
   gem "pry-byebug", platform: :mri
 

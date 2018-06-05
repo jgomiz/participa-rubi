@@ -1,4 +1,4 @@
-# Decidim Rubi
+# Participa Rubí
 
 Citizen Participation and Open Government application.
 
@@ -36,3 +36,11 @@ migrations (if any)
 * `bundle update decidim decidim-dev`
 * `bin/rails decidim:upgrade`
 * `bin/rails db:migrate`
+
+## Rubí Customization
+
+* The Decidim primary color has been modified
+* Fixed login error texts in Spanish
+* Replace all "survey" occurrences for "Questionari de participació" in the texts
+* Added a custom Authorization Handler that uses the Rubí API
+* Added a different error message when the DNI is not found in the custom Authorization Handler. See: `app/views/ws_authorization/_form.html.erb`

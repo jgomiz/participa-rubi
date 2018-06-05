@@ -9,6 +9,14 @@ es:
           attributes:
             document_number:
               invalid: No hemos encontrado este documento de identidad en el registro de participación
+    models:
+      decidim/surveys/closed_survey_event: Cuestionario participativo terminado
+      decidim/surveys/opened_survey_event: El cuestionario participativo ha empezado
+  activerecord:
+    models:
+      decidim/surveys/survey:
+        one: Cuestionario participativo
+        other: Cuestionario participativos
   decidim:
     verifications:
       authorizations:
@@ -21,11 +29,23 @@ es:
         explanation: Valídate en el registro de Participación del Ajuntament de Rubí para participar en la plataforma.
       participation_registry:
         name: 'Registro de participación'
-    features:
+    components:
       surveys:
         name: 'Cuestionario participativo'
+    events:
+      surveys:
+        survey_closed:
+          email_intro: Se ha cerrado el cuestionario participativo %{resource_title} en %{participatory_space_title}.
+          email_subject: Ha terminado un cuestionario participativo en %{participatory_space_title}
+          notification_title: El cuestionario participativo <a href="%{resource_path}">%{resource_title}</a> en <a href="%{participatory_space_url}">%{participatory_space_title}</a> ha terminado.
+        survey_opened:
+          email_intro: 'Ya está abierto el cuestionario participativo %{resource_title} en %{participatory_space_title}. Puedes participar desde esta página:'
+          email_subject: Nuevo cuestionario participativo en %{participatory_space_title}
+          notification_title: Ya está abierto el cuestionario participativo <a href="%{resource_path}">%{resource_title}</a> en <a href="%{participatory_space_url}">%{participatory_space_title}</a>.
     surveys:
       admin:
+        exports:
+          survey_user_answers: Respuestas de los usuarios del cuestionario participativo
         surveys:
           form:
             already_answered_warning: El cuestionario ya está contestado por algunos usuarios, así que no puedes modificar sus preguntas.
@@ -55,3 +75,8 @@ es:
       error_instructions: '<p>Usted no está inscrito en el Registro de Participación. Para poder participar en los procesos de participación hay que registrarse primero en el Registro de Participación del l’Ajuntament de Rubí.</p>
       <p><a href="https://www.e-ajrubi.net/eParticipa/Products/Carpeta/Public/Requests/InetReqPublic.aspx?TypeId=38317&AppScope=CIUDADANO&language=es" target="_blank">Click aquí para realizar el registro.</a></p>
       <p> Una vez lo hayas hecho, te devolverá a esta página y tendrás que volver a escribir tu DNI. </p>'
+  devise:
+    failure:
+      user:
+        not_found_in_database: "Correo electrónico o contraseña inválidos."
+        invalid: "Correo electrónico o contraseña inválidos."
