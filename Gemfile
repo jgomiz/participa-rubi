@@ -17,6 +17,8 @@ gem "sidekiq"
 
 gem "faker", "~> 1.8"
 
+gem "letter_opener_web", "~> 1.3.0"
+
 group :development, :test do
   gem "decidim-dev", "0.11.1"
   gem "dotenv-rails"
@@ -28,8 +30,6 @@ end
 
 group :development do
   gem "webmock"
-
-  gem "letter_opener_web", "~> 1.3.0"
   gem "listen", "~> 3.1.0"
   gem "rubocop"
   gem "spring"
