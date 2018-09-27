@@ -12,6 +12,7 @@ if Rails.env.production? || Rails.env.staging?
     config.fog_directory = Rails.application.secrets.aws_s3_bucket
     config.fog_attributes = { "Cache-Control" => "max-age=#{365.days.to_i}" }
     config.storage = :fog
+    config.cache_dir = Rails.root.join('tmp', 'uploads')
   end
 else
   CarrierWave.configure do |config|
