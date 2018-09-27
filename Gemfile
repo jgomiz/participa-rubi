@@ -5,7 +5,7 @@ source "https://rubygems.org"
 ruby "2.5.1"
 
 gem "rails", "5.2.0"
-gem "decidim", "0.12.2"
+gem "decidim", "0.13.1"
 
 gem "puma", "~> 3.0"
 gem "uglifier", ">= 1.3.0"
@@ -21,7 +21,7 @@ gem "faker", "~> 1.8"
 gem "letter_opener_web", "~> 1.3.0"
 
 group :development, :test do
-  gem "decidim-dev", "0.12.2"
+  gem "decidim-dev", "0.13.1"
   gem "dotenv-rails"
   gem "pry-byebug", platform: :mri
 
