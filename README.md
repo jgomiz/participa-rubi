@@ -25,6 +25,10 @@ user.save!
 5.  Set the correct default host for the organization, otherwise the app will not work properly. Note that you need to include any subdomain you might be using.
 6.  Fill the rest of the form and submit it.
 
+There are some tasks that need to be run periodically for the platform to work:
+
+- `decidim:metrics:all` Once a day
+
 You're good to go!
 
 ## Update Decidim

@@ -1,10 +1,12 @@
 # frozen_string_literal: true
 
+DECIDIM_VERSION = "0.15.2"
+
 source "https://rubygems.org"
 
 ruby "2.5.1"
 
-gem "decidim", "0.14.3"
+gem "decidim", DECIDIM_VERSION
 
 gem "puma", "~> 3.0"
 gem "uglifier", ">= 1.3.0"
@@ -20,7 +22,7 @@ gem "faker", "~> 1.8"
 gem "letter_opener_web", "~> 1.3.0"
 
 group :development, :test do
-  gem "decidim-dev", "0.14.3"
+  gem "decidim-dev", DECIDIM_VERSION
   gem "dotenv-rails"
   gem "pry-byebug", platform: :mri
 
