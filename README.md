@@ -28,6 +28,7 @@ user.save!
 There are some tasks that need to be run periodically for the platform to work:
 
 - `decidim:metrics:all` Once a day
+- `decidim:open_data:export` Once a day
 
 You're good to go!
 
