@@ -44,8 +44,12 @@ migrations (if any)
 
 ## Rubí Customization
 
+All of these items need to be tested / adapted everytime a new update is applied.
+
 * The Decidim primary color has been modified
 * Fixed login error texts in Spanish
 * Replace all "survey" occurrences for "Questionari de participació" in the texts
 * Added a custom Authorization Handler that uses the Rubí API
 * Added a different error message when the DNI is not found in the custom Authorization Handler. See: `app/views/ws_authorization/_form.html.erb`
+* Participatory Process screen does not longer show Process Groups. See: app/enhancers/participatory_processes_controller_enhancer.rb and config/application.rb
+* Participatory Process Groups are now listed in the menu bar. See config/initializers/decidim.rb and config/application.rb.
