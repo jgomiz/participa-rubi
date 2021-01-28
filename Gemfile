@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-DECIDIM_VERSION = "0.19.1"
+DECIDIM_VERSION = "0.20.1"
 
 source "https://rubygems.org"
 
