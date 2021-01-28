@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-DECIDIM_VERSION = "0.20.1"
+DECIDIM_VERSION = "0.21.0"
 
 source "https://rubygems.org"
 
@@ -8,7 +8,7 @@ ruby "2.5.1"
 
 gem "decidim", DECIDIM_VERSION
 
-gem "puma", "~> 3.0"
+gem "puma"
 gem "uglifier", ">= 1.3.0"
 
 gem "savon", "~> 2.12.0"
