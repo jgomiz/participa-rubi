@@ -19,8 +19,8 @@ module DecidimRubi
     initializer :decidim_overrides, after: :disable_dependency_loading do |app|
 
       # Overrides and enhancements to the current library
-      Decidim::ParticipatoryProcesses::ParticipatoryProcessesController
-        .prepend(ParticipatoryProcessesControllerEnhancer)
+      Decidim::ParticipatoryProcesses::ParticipatoryProcessesController.prepend(ParticipatoryProcessesControllerEnhancer)
+      Decidim::ParticipatoryProcesses::ProcessFiltersCell.prepend(ParticipatoryProcessesCellEnhancer)
 
       # In this Decidim version there is no way to identify specific menu items.
       # They are just a collection of procs. We need to remove the proc corresponding to the

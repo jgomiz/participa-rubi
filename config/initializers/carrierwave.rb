@@ -19,6 +19,7 @@ else
     config.permissions = 0o666
     config.directory_permissions = 0o777
     config.storage = :file
+    config.asset_host = ENV['UPLOADS_ASSET_HOST'] if ENV['UPLOADS_ASSET_HOST']
     config.enable_processing = !Rails.env.test?
   end
 end
