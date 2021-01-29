@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-DECIDIM_VERSION = "0.22.0"
+DECIDIM_VERSION = "0.23.1"
 
 source "https://rubygems.org"
 
-ruby "2.5.1"
+ruby "2.6.6"
 
 gem "decidim", DECIDIM_VERSION
 
