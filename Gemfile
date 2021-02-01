@@ -8,7 +8,7 @@ ruby "2.5.1"
 
 gem "decidim", DECIDIM_VERSION
 
-gem "puma", "~> 3.0"
+gem "puma", "~> 3.12"
 gem "uglifier", ">= 1.3.0"
 
 gem "savon", "~> 2.12.0"
