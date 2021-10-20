@@ -1,0 +1,4 @@
+production:
+  rails:
+    configuration:
+      passenger_process_memory: 500
