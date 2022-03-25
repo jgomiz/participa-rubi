@@ -1,4 +1,5 @@
 production:
   rails:
     configuration:
+      ruby_version: 2.7.1
       passenger_process_memory: 500

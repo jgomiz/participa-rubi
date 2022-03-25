@@ -69,7 +69,7 @@ Decidim.menu :menu do |menu|
                                     .joins(:participatory_processes)
                                     .uniq
                                     .each_with_index do |group, index|
-    menu.item translated_attribute(group.name),
+    menu.item translated_attribute(group.title),
               Decidim::ParticipatoryProcesses::Engine.routes.url_helpers.participatory_process_group_path(group),
               position: "3.#{index}".to_f,
               active: :exact
