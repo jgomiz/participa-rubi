@@ -9,8 +9,6 @@ Rails.application.configure do
   config.read_encrypted_secrets = false
 
   config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
-  config.assets.js_compressor = Uglifier.new(harmony: true)
-  config.assets.compile = false
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
@@ -28,6 +26,8 @@ Rails.application.configure do
 
   config.active_job.queue_adapter = :sidekiq
   config.action_mailer.perform_caching = false
+
+  config.active_storage.service = :amazon
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

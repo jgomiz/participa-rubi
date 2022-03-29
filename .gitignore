@@ -23,3 +23,13 @@ config/database.yml
 
 # Ignore public uploads
 public/uploads
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+storage
+manifest.json
