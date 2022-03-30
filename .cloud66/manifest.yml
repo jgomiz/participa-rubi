@@ -2,3 +2,6 @@ production:
   rails:
     configuration:
       passenger_process_memory: 500
+  postgresql:
+    configuration:
+      version: 13.3
