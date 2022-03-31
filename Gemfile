@@ -9,6 +9,7 @@ ruby "2.7.1"
 gem "decidim", DECIDIM_VERSION
 
 gem "pg"
+gem "aws-sdk-s3", require: false
 
 gem "puma"
 
