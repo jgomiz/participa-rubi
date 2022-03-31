@@ -8,6 +8,8 @@ ruby "2.6.6"
 
 gem "decidim", DECIDIM_VERSION
 
+gem "pg"
+
 gem "puma"
 gem "uglifier", ">= 1.3.0"
 
