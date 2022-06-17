@@ -6,3 +6,11 @@ production:
   postgresql:
     configuration:
       version: 13.3
+staging:
+  rails:
+    configuration:
+      ruby_version: 2.7.5
+      passenger_process_memory: 500
+  postgresql:
+    configuration:
+      version: 13.3
