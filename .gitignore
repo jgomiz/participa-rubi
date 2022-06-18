@@ -36,4 +36,3 @@ storage
 manifest.json
 .rbenv-vars
 .nvmrc
-yarn.lock
