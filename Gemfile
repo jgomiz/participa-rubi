@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
-DECIDIM_VERSION = "0.23.6"
+DECIDIM_VERSION = "0.25.2"
 
 source "https://rubygems.org"
 
-ruby "2.6.6"
+ruby "2.7.5"
 
 gem "decidim", DECIDIM_VERSION
 
 gem "pg"
+gem "aws-sdk-s3", require: false
 
 gem "puma"
-gem "uglifier", ">= 1.3.0"
 
 gem "savon", "~> 2.12.0"
 
@@ -20,11 +20,6 @@ gem "sentry-raven"
 gem "sidekiq"
 
 gem "faker", "~> 1.8"
-
-gem "letter_opener_web", "~> 1.3.0"
-
-# The sprockets 4.0.0 version fails with Decidim 0.18.1 assets.
-gem "sprockets", "3.7.2"
 
 group :development, :test do
   gem "decidim-dev", DECIDIM_VERSION
@@ -43,5 +38,5 @@ group :development do
   gem "spring-commands-rspec"
   gem "spring-watcher-listen", "~> 2.0.0"
   gem "web-console"
-  gem "xray-rails"
+  gem "letter_opener"
 end

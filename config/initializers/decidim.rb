@@ -51,6 +51,8 @@ Decidim.configure do |config|
   config.enable_html_header_snippets = false
 end
 
+Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
+
 Rails.application.config.i18n.available_locales = Decidim.available_locales
 Rails.application.config.i18n.default_locale = Decidim.default_locale
 
@@ -69,7 +71,7 @@ Decidim.menu :menu do |menu|
                                     .joins(:participatory_processes)
                                     .uniq
                                     .each_with_index do |group, index|
-    menu.item translated_attribute(group.name),
+    menu.item translated_attribute(group.title),
               Decidim::ParticipatoryProcesses::Engine.routes.url_helpers.participatory_process_group_path(group),
               position: "3.#{index}".to_f,
               active: :exact
