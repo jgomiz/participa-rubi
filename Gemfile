@@ -20,6 +20,7 @@ gem "sentry-raven"
 gem "sidekiq"
 
 gem "faker", "~> 1.8"
+gem "appsignal"
 
 group :development, :test do
   gem "decidim-dev", DECIDIM_VERSION
