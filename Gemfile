@@ -23,10 +23,6 @@ gem "dalli"
 gem "faker", "~> 1.8"
 gem "appsignal"
 
-group :staging do
-  gem 'letter_opener_web', '~> 2'
-end
-
 group :development, :test do
   gem "decidim-dev", DECIDIM_VERSION
   gem "dotenv-rails"
