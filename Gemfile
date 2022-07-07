@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-DECIDIM_VERSION = "0.25.2"
+DECIDIM_VERSION = "0.26.2"
 
 source "https://rubygems.org"
 
@@ -22,10 +22,6 @@ gem "dalli"
 
 gem "faker", "~> 1.8"
 gem "appsignal"
-
-group :staging do
-  gem 'letter_opener_web', '~> 2'
-end
 
 group :development, :test do
   gem "decidim-dev", DECIDIM_VERSION
