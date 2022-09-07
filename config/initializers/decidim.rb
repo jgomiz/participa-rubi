@@ -49,6 +49,12 @@ Decidim.configure do |config|
   # take over user accounts.
   #
   config.enable_html_header_snippets = true
+
+  # Max requests in a time period to prevent DoS attacks. Only applied on production.
+  config.throttling_max_requests = 500
+
+  # Time window in which the throttling is applied.
+  config.throttling_period = 1.minute
 end
 
 Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
