@@ -53,3 +53,5 @@ All of these items need to be tested / adapted everytime a new update is applied
 * Added a different error message when the DNI is not found in the custom Authorization Handler. See: `app/views/ws_authorization/_form.html.erb`
 * Participatory Process screen does not longer show Process Groups. See: app/enhancers/participatory_processes_controller_enhancer.rb and config/application.rb
 * Participatory Process Groups are now listed in the menu bar. See config/initializers/decidim.rb and config/application.rb.
+
+
