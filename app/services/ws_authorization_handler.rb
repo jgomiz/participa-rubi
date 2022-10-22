@@ -4,9 +4,13 @@ class WsAuthorizationHandler < Decidim::AuthorizationHandler
   attr_writer :soap_client
 
   attribute :document_number, String
+  attribute :year, String
 
   validates :document_number, presence: true
+  validates :year, presence: true
+
   validate :valid_document_number
+  validate :valid_year
 
   def initialize(params)
     super(params)
@@ -19,21 +23,29 @@ class WsAuthorizationHandler < Decidim::AuthorizationHandler
   private
 
   def valid_document_number
-    errors.add(:document_number, :invalid) unless in_participation_registry?(document_number)
+    errors.add(:document_number, :invalid) unless in_participation_registry?(document_number, year)
   end
 
-  def in_participation_registry?(document_number)
-    response = participation_registry_check(document_number)
-    @ws_user_unique_id = response.body.dig(:entries, :entry, :inscrit)
-    @ws_user_unique_id.present?
+  def valid_year
+    errors.add(:year, :invalid) if year.to_i < 1900 || year.to_i > Time.zone.now.year
+  end
+
+  def in_participation_registry?(document_number, year)
+    response = participation_registry_check(document_number, year)
+    response.body.dig(:entries, :entry, :participa).to_i == 1
   end
 
   def normalize(document_number)
-    document_number.delete("- \t\r\n").upcase
+    return nil if document_number.nil?
+
+    document_number.delete("- \t\r\n").upcase.strip
   end
 
-  def participation_registry_check(document_number)
-    soap_client.call(:get_dni, message: { dni: normalize(document_number) })
+  def participation_registry_check(document_number, year)
+    soap_client.call(:get_dni_any, message: {
+      dni: normalize(document_number),
+      any_naixement: normalize(year)
+    })
   end
 
   def soap_client
