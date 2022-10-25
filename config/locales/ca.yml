@@ -3,12 +3,15 @@ ca:
     attributes:
       ws_authorization_handler:
         document_number: Número de document d'identitat (amb lletra)
+        year: Any de naixement
     errors:
       models:
         ws_authorization_handler:
           attributes:
             document_number:
               invalid: No hem trobat aquest document d'identitat al Registre de participació
+            year:
+              invalid: L'any de naixement no és vàlid
     models:
       decidim/surveys/closed_survey_event: S'ha acabat el qüestionari participatiu
       decidim/surveys/opened_survey_event: S'ha iniciat el qüestionari participatiu
