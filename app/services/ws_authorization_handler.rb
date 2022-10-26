@@ -17,7 +17,9 @@ class WsAuthorizationHandler < Decidim::AuthorizationHandler
   end
 
   def unique_id
-    @ws_user_unique_id
+    Digest::MD5.hexdigest(
+      "#{document_number}-#{year}-#{Rails.application.secrets.secret_key_base}"
+    )
   end
 
   private
