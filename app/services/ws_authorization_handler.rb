@@ -23,7 +23,7 @@ class WsAuthorizationHandler < Decidim::AuthorizationHandler
   private
 
   def valid_document_number
-    errors.add(:document_number, :invalid) unless in_participation_registry?(document_number, year)
+    errors.add(:base, :invalid) unless in_participation_registry?(document_number, year)
   end
 
   def valid_year
