@@ -51,7 +51,8 @@ class WsAuthorizationHandler < Decidim::AuthorizationHandler
   def soap_client
     @soap_client ||
       Savon.client(wsdl: participation_registry_endpoint(wsdl: true),
-                   endpoint: participation_registry_endpoint)
+                   endpoint: participation_registry_endpoint,
+                   convert_request_keys_to: :none)
   end
 
   def participation_registry_endpoint(wsdl: false)
