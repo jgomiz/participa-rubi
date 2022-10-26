@@ -11,9 +11,6 @@ class WsAuthorizationHandler < Decidim::AuthorizationHandler
   attribute :document_number, String
   attribute :year, String
 
-  validates :document_number, presence: true
-  validates :year, presence: true
-
   validates(
     :document_number,
     format: { with: DOCUMENT_REGEXP },
