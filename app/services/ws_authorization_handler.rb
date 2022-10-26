@@ -21,7 +21,11 @@ class WsAuthorizationHandler < Decidim::AuthorizationHandler
   )
   validates(
     :year,
-    numericality: true,
+    numericality: {
+      only_integer: true,
+      greater_than_or_equal_to: Date.today.year - 120,
+      less_than_or_equal_to: Date.today.year - 15
+    },
     presence: true
   )
   validate :check_response
