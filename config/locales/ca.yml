@@ -9,7 +9,7 @@ ca:
         ws_authorization_handler:
           attributes:
             document_number:
-              invalid: No hem trobat aquest document d'identitat al Registre de participació
+              invalid: No hem trobat aquest document d'identitat al cens
             year:
               invalid: L'any de naixement no és vàlid
     models:
@@ -25,13 +25,13 @@ ca:
       authorizations:
         first_login:
           actions:
-            ws_authorization_handler: 'Registre de participació'
+            ws_authorization_handler: 'Cens'
     authorization_handlers:
       ws_authorization_handler:
-        name: "Registre de participació"
-        explanation: Valida't contra el Registre de participació de l'Ajuntament de Rubí per participar en la plataforma.
+        name: "Cens"
+        explanation: Valida't contra el cens de l'Ajuntament de Rubí per participar en la plataforma.
       participation_registry:
-        name: 'Registre de participació'
+        name: 'Cens'
     components:
       surveys:
         name: 'Qüestionari participatiu'
@@ -70,9 +70,9 @@ ca:
           tos_agreement: En participar en aquest qüestionari participatiu acceptes els Termes de Servei
     core:
       actions:
-        unauthorized:  No tens permís per realitzar aquesta acció. Per poder fer-ho, ves a Autoritzacions dins del meu compte i verifiqueu el vostre perfil amb el Registre de Participació.
+        unauthorized:  No tens permís per realitzar aquesta acció. Per poder fer-ho, ves a Autoritzacions dins del meu compte i verifiqueu el vostre perfil amb el Cens.
   ws_authorization:
     form:
-      error_instructions: '<p>Vosté no està inscrit al Registre de Participació. Per poder participar als processos de participació t’has de registrar primer al Registre de Participació de l’Ajuntament de Rubí.</p>
+      error_instructions: '<p>Vosté no està inscrit al Cens. Per poder participar als processos de participació t’has de registrar primer al Cens de l’Ajuntament de Rubí.</p>
       <p><a href="https://www.e-ajrubi.net/eParticipa/Products/Carpeta/Public/Requests/InetReqPublic.aspx?TypeId=38317&AppScope=CIUDADANO&language=ca" target="_blank">Clica aquí per realitzar el registre.</a></p>
       <p>Un cop l’hagis fet, se’t retornarà a aquesta pàgina i hauràs de tornar a escriure el teu DNI.</p>'
