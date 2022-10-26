@@ -78,6 +78,10 @@ es:
       error_instructions: '<p>Usted no está inscrito en el Censo. Para poder participar en los procesos de participación hay que registrarse primero en el Censo del l’Ajuntament de Rubí.</p>
       <p><a href="https://www.e-ajrubi.net/eParticipa/Products/Carpeta/Public/Requests/InetReqPublic.aspx?TypeId=38317&AppScope=CIUDADANO&language=es" target="_blank">Click aquí para realizar el registro.</a></p>
       <p> Una vez lo hayas hecho, te devolverá a esta página y tendrás que volver a escribir tu DNI. </p>'
+ws_authorization_handler:
+    invalid_year: Año de nacimiento incorrecto
+    invalid_document: Número de documento incorrecto
+    invalid_message: El número de documento o el año de nacimiento son incorrectos. Por favor revisa estos datos.
   devise:
     failure:
       user:

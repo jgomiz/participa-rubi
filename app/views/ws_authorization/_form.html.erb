@@ -8,7 +8,7 @@
 
 <%= form.hidden_field :handler_name %>
 
-<% if form.object.errors.messages[:document_number].present? && controller_name != 'impersonations' %>
+<% if form.object.errors.any? controller_name != 'impersonations' %>
   <div class="callout announcement secondary">
     <%= t('.error_instructions').html_safe %>
   </div>
