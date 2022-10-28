@@ -28,10 +28,10 @@ es:
             ws_authorization_handler: 'Censo'
     authorization_handlers:
       ws_authorization_handler:
-        name: "El censo"
+        name: "el censo"
         explanation: Valídate en el registro de Participación del Ajuntament de Rubí para participar en la plataforma.
       participation_registry:
-        name: 'El censo'
+        name: 'el censo'
     components:
       surveys:
         name: 'Cuestionario participativo'

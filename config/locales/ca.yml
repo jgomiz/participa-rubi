@@ -28,10 +28,10 @@ ca:
             ws_authorization_handler: 'Cens'
     authorization_handlers:
       ws_authorization_handler:
-        name: "El cens"
+        name: "el cens"
         explanation: Valida't contra el cens de l'Ajuntament de Rubí per participar en la plataforma.
       participation_registry:
-        name: 'El cens'
+        name: 'el cens'
     components:
       surveys:
         name: 'Qüestionari participatiu'
