@@ -81,7 +81,7 @@ es:
   ws_authorization_handler:
     invalid_year: Año de nacimiento incorrecto
     invalid_document: Número de documento incorrecto
-    invalid_message: El número de documento o el año de nacimiento son incorrectos. Por favor revisa estos datos.
+    invalid_message: Según el censo, tus datos no son correctos o no cumples los requisitos para participar.
   devise:
     failure:
       user:
