@@ -3,12 +3,15 @@ ca:
     attributes:
       ws_authorization_handler:
         document_number: Número de document d'identitat (amb lletra)
+        year: Any de naixement
     errors:
       models:
         ws_authorization_handler:
           attributes:
             document_number:
-              invalid: No hem trobat aquest document d'identitat al Registre de participació
+              invalid: No hem trobat aquest document d'identitat al cens
+            year:
+              invalid: L'any de naixement no és vàlid
     models:
       decidim/surveys/closed_survey_event: S'ha acabat el qüestionari participatiu
       decidim/surveys/opened_survey_event: S'ha iniciat el qüestionari participatiu
@@ -22,13 +25,13 @@ ca:
       authorizations:
         first_login:
           actions:
-            ws_authorization_handler: 'Registre de participació'
+            ws_authorization_handler: 'Cens'
     authorization_handlers:
       ws_authorization_handler:
-        name: "Registre de participació"
-        explanation: Valida't contra el Registre de participació de l'Ajuntament de Rubí per participar en la plataforma.
+        name: "el cens"
+        explanation: Valida't contra el cens de l'Ajuntament de Rubí per participar en la plataforma.
       participation_registry:
-        name: 'Registre de participació'
+        name: 'el cens'
     components:
       surveys:
         name: 'Qüestionari participatiu'
@@ -67,9 +70,13 @@ ca:
           tos_agreement: En participar en aquest qüestionari participatiu acceptes els Termes de Servei
     core:
       actions:
-        unauthorized:  No tens permís per realitzar aquesta acció. Per poder fer-ho, ves a Autoritzacions dins del meu compte i verifiqueu el vostre perfil amb el Registre de Participació.
+        unauthorized:  No tens permís per realitzar aquesta acció. Per poder fer-ho, ves a Autoritzacions dins del meu compte i verifiqueu el vostre perfil amb el cens.
+  ws_authorization_handler:
+    invalid_year: Any de naixement incorrecte
+    invalid_document: Número de document incorrecte
+    invalid_message: Segons el cens, les teves dades no són correctes o no compleixes els requisits per participar.
   ws_authorization:
     form:
-      error_instructions: '<p>Vosté no està inscrit al Registre de Participació. Per poder participar als processos de participació t’has de registrar primer al Registre de Participació de l’Ajuntament de Rubí.</p>
+      error_instructions: '<p>Vosté no està inscrit al cens. Per poder participar als processos de participació t’has de registrar primer al cens de l’Ajuntament de Rubí.</p>
       <p><a href="https://www.e-ajrubi.net/eParticipa/Products/Carpeta/Public/Requests/InetReqPublic.aspx?TypeId=38317&AppScope=CIUDADANO&language=ca" target="_blank">Clica aquí per realitzar el registre.</a></p>
       <p>Un cop l’hagis fet, se’t retornarà a aquesta pàgina i hauràs de tornar a escriure el teu DNI.</p>'

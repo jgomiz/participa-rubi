@@ -1,6 +1,14 @@
-<%= form.all_fields %>
+<div class="field">
+  <%= form.text_field :document_number %>
+</div>
 
-<% if form.object.errors.messages[:document_number].present? && controller_name != 'impersonations' %>
+<div class="field date">
+  <%= form.text_field :year %>
+</div>
+
+<%= form.hidden_field :handler_name %>
+
+<% if form.object.errors.any? controller_name != 'impersonations' %>
   <div class="callout announcement secondary">
     <%= t('.error_instructions').html_safe %>
   </div>

@@ -1,7 +1,0 @@
-production:
-  after_symlink:
-    - command: cd $RAILS_STACK_PATH && mkdir -p tmp/uploads && chown -R cloud66-user:app_writers tmp/uploads && chmod g+w -R tmp
-      target: rails
-      apply_during: all
-      run_on: all_servers
-      sudo: true
