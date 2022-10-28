@@ -28,10 +28,10 @@ ca:
             ws_authorization_handler: 'Cens'
     authorization_handlers:
       ws_authorization_handler:
-        name: "Cens"
+        name: "El cens"
         explanation: Valida't contra el cens de l'Ajuntament de Rubí per participar en la plataforma.
       participation_registry:
-        name: 'Cens'
+        name: 'El cens'
     components:
       surveys:
         name: 'Qüestionari participatiu'
@@ -70,13 +70,13 @@ ca:
           tos_agreement: En participar en aquest qüestionari participatiu acceptes els Termes de Servei
     core:
       actions:
-        unauthorized:  No tens permís per realitzar aquesta acció. Per poder fer-ho, ves a Autoritzacions dins del meu compte i verifiqueu el vostre perfil amb el Cens.
+        unauthorized:  No tens permís per realitzar aquesta acció. Per poder fer-ho, ves a Autoritzacions dins del meu compte i verifiqueu el vostre perfil amb el cens.
   ws_authorization_handler:
     invalid_year: Any de naixement incorrecte
     invalid_document: Número de document incorrecte
     invalid_message: Segons el cens, les teves dades no són correctes o no compleixes els requisits per participar.
   ws_authorization:
     form:
-      error_instructions: '<p>Vosté no està inscrit al Cens. Per poder participar als processos de participació t’has de registrar primer al Cens de l’Ajuntament de Rubí.</p>
+      error_instructions: '<p>Vosté no està inscrit al cens. Per poder participar als processos de participació t’has de registrar primer al cens de l’Ajuntament de Rubí.</p>
       <p><a href="https://www.e-ajrubi.net/eParticipa/Products/Carpeta/Public/Requests/InetReqPublic.aspx?TypeId=38317&AppScope=CIUDADANO&language=ca" target="_blank">Clica aquí per realitzar el registre.</a></p>
       <p>Un cop l’hagis fet, se’t retornarà a aquesta pàgina i hauràs de tornar a escriure el teu DNI.</p>'
