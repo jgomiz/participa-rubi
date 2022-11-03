@@ -3,7 +3,7 @@
 </div>
 
 <div class="field date">
-  <%= form.text_field :year %>
+  <%= form.select :year, (Date.today.year - 120)..(Date.today.year - 15) %>
 </div>
 
 <%= form.hidden_field :handler_name %>
