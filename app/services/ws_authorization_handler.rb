@@ -37,7 +37,11 @@ class WsAuthorizationHandler < Decidim::AuthorizationHandler
 
   def check_response
     response = participation_registry_check(document_number, year)
-    response_code = response.body.dig(:entries, :entry, :participa)
+    response_code = if response
+      response.body.dig(:entries, :entry, :participa)
+    else
+      nil
+    end
 
     errors.add(:base, I18n.t("ws_authorization_handler.invalid_message")) if response.blank? || response_code&.to_i != 1
   end
@@ -53,6 +57,9 @@ class WsAuthorizationHandler < Decidim::AuthorizationHandler
       dni: normalize(document_number),
       any_naixement: normalize(year)
     })
+  rescue Savon::SOAPFault => error
+    puts "[Census] SOAP error: #{error}"
+    return nil
   end
 
   def soap_client
