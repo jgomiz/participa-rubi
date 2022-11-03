@@ -53,6 +53,9 @@ class WsAuthorizationHandler < Decidim::AuthorizationHandler
       dni: normalize(document_number),
       any_naixement: normalize(year)
     })
+  rescue Savon::SOAPFault => error
+    puts "[Census] SOAP error: #{error}"
+    return nil
   end
 
   def soap_client
