@@ -17,7 +17,7 @@ gem "savon", "~> 2.12.0"
 
 gem "fog-aws"
 gem "sentry-raven"
-gem "sidekiq"
+gem "sidekiq", "~> 6.5.6"
 gem "dalli"
 
 gem "faker", "~> 1.8"
