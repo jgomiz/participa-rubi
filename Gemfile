@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-DECIDIM_VERSION = "0.26.3"
+DECIDIM_VERSION = "0.27.4"
 
 source "https://rubygems.org"
 
-ruby "2.7.5"
+ruby "3.1.1"
 
 gem "decidim", DECIDIM_VERSION
 
@@ -36,7 +36,7 @@ end
 
 group :development do
   gem "webmock"
-  gem "listen", "~> 3.1.0"
+  gem "listen", "~> 3.8.0"
   gem "rubocop"
   gem "spring"
   gem "spring-commands-rspec"
