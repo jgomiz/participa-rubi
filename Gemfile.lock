@@ -567,6 +567,7 @@ GEM
     premailer-rails (1.11.1)
       actionmailer (>= 3)
       premailer (~> 1.7, >= 1.7.9)
+    progressbar (1.13.0)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -827,6 +828,7 @@ DEPENDENCIES
   letter_opener
   listen (~> 3.1.0)
   pg
+  progressbar
   pry-byebug
   puma
   rspec-rails

@@ -23,6 +23,8 @@ gem "dalli"
 gem "faker", "~> 1.8"
 gem "appsignal"
 
+gem "progressbar"
+
 group :development, :test do
   gem "decidim-dev", DECIDIM_VERSION
   gem "dotenv-rails"
