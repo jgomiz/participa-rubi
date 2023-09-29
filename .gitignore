@@ -23,6 +23,9 @@
 # Ignore public uploads
 public/uploads
 
+# Ignore Tailwind configuration
+tailwind.config.js
+
 /public/decidim-packs
 /public/packs
 /public/packs-test
