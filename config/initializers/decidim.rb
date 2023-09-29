@@ -55,6 +55,9 @@ Decidim.configure do |config|
 
   # Time window in which the throttling is applied.
   config.throttling_period = 1.minute
+
+  # Defines the social networking services used for social sharing
+  config.social_share_services = %w(twitter facebook whatsapp_app whatsapp_web telegram)
 end
 
 Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
