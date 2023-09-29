@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-DECIDIM_VERSION = "0.27.4"
+DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim', branch: 'develop' }.freeze
 
 source "https://rubygems.org"
 
@@ -20,7 +20,7 @@ gem "sentry-raven"
 gem "sidekiq", "~> 6.5.6"
 gem "dalli"
 
-gem "faker", "~> 1.8"
+gem "faker", "~> 3.2"
 gem "appsignal"
 
 gem "progressbar"
