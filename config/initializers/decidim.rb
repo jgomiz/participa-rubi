@@ -4,10 +4,6 @@ Decidim.configure do |config|
   config.application_name = "Participa Rubí"
   config.mailer_sender = Rails.application.secrets.mailer_sender
 
-  # Change these lines to set your preferred locales
-  config.default_locale = :ca
-  config.available_locales = [:ca, :es]
-
   Decidim::Verifications.register_workflow(:ws_authorization_handler) do |workflow|
     workflow.form = "WsAuthorizationHandler"
   end
