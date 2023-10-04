@@ -53,7 +53,7 @@ Decidim.configure do |config|
   config.throttling_period = 1.minute
 
   # Defines the social networking services used for social sharing
-  config.social_share_services = %w(twitter facebook whatsapp_app whatsapp_web telegram)
+  config.social_share_services = %w(X Facebook WhatsApp Telegram)
 end
 
 Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
