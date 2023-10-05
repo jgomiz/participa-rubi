@@ -24,6 +24,7 @@ gem "faker", "~> 3.2"
 gem "appsignal"
 
 gem "progressbar"
+gem "seven_zip_ruby"
 
 group :development, :test do
   gem "decidim-dev", DECIDIM_VERSION
