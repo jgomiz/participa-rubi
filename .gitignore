@@ -38,3 +38,5 @@ storage
 manifest.json
 .rbenv-vars
 .nvmrc
+
+/config/master.key
