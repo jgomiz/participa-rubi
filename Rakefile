@@ -6,3 +6,6 @@
 require_relative "config/application"
 
 Rails.application.load_tasks
+
+Rake::Task["webpacker:check_yarn"].clear
+Rake::Task["webpacker:yarn_install"].clear
