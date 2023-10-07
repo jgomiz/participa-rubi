@@ -54,6 +54,17 @@ Decidim.configure do |config|
 
   # Defines the social networking services used for social sharing
   config.social_share_services = %w(X Facebook WhatsApp Telegram)
+
+  config.content_security_policies_extra = {
+    "default-src" => %w('self' 'unsafe-inline'),
+    "script-src" => %w('self' 'unsafe-inline' 'unsafe-eval'),
+    "style-src" => %w('self' 'unsafe-inline'),
+    "img-src" => %w('self' *.hereapi.com data: *.amazonaws.com),
+    "font-src" => %w('self'),
+    "connect-src" => %w('self' *.hereapi.com *.jsdelivr.net *.amazonaws.com),
+    "frame-src" => %w('self' *.youtube.com),
+    "media-src" => %w('self')
+  }
 end
 
 Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
