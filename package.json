@@ -5,7 +5,7 @@
     "@decidim/browserslist-config": "^0.26.2",
     "@decidim/core": "^0.26.2",
     "@decidim/elections": "^0.26.2",
-    "@decidim/webpacker": "^0.26.2",
+    "@decidim/webpacker": "^0.27.0",
     "@rails/webpacker": "^6.0.0-rc.5"
   },
   "version": "0.1.0",
