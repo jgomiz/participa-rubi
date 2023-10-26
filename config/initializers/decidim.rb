@@ -72,6 +72,19 @@ Decidim.register_assets_path File.expand_path("app/packs", Rails.application.roo
 Rails.application.config.i18n.available_locales = Decidim.available_locales
 Rails.application.config.i18n.default_locale = Decidim.default_locale
 
+Decidim.menu :home_content_block_menu do |menu|
+  # Add a Menu Item for every ParticipatoryProcessGroup in the organization.
+  Decidim::ParticipatoryProcessGroup.where(organization: current_organization)
+                                    .joins(:participatory_processes)
+                                    .uniq
+                                    .each_with_index do |group, index|
+    menu.item translated_attribute(group.title),
+              Decidim::ParticipatoryProcesses::Engine.routes.url_helpers.participatory_process_group_path(group),
+              position: "3.#{index}".to_f,
+              active: :exact
+  end
+end
+
 Decidim.menu :menu do |menu|
 
   # Add again the Processes menu item, as we need to enforce that it's not active for
