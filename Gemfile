@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-DECIDIM_VERSION = "0.26.3"
+DECIDIM_VERSION = { git: 'https://github.com/decidim/decidim', branch: 'develop' }.freeze
 
 source "https://rubygems.org"
 
-ruby "2.7.5"
+ruby "3.1.1"
 
 gem "decidim", DECIDIM_VERSION
 
@@ -20,8 +20,11 @@ gem "sentry-raven"
 gem "sidekiq", "~> 6.5.6"
 gem "dalli"
 
-gem "faker", "~> 1.8"
+gem "faker", "~> 3.2"
 gem "appsignal"
+
+gem "progressbar"
+gem "seven_zip_ruby"
 
 group :development, :test do
   gem "decidim-dev", DECIDIM_VERSION
@@ -34,7 +37,7 @@ end
 
 group :development do
   gem "webmock"
-  gem "listen", "~> 3.1.0"
+  gem "listen", "~> 3.8.0"
   gem "rubocop"
   gem "spring"
   gem "spring-commands-rspec"

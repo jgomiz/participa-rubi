@@ -2,6 +2,6 @@ module ParticipatoryProcessesControllerEnhancer
 
   # Override: Removes participatory_group_processes from collection
   def collection
-    @collection ||= participatory_processes.to_a.flatten
+    @collection ||= paginate(participatory_processes)
   end
 end

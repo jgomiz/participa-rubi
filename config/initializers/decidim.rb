@@ -4,10 +4,6 @@ Decidim.configure do |config|
   config.application_name = "Participa Rubí"
   config.mailer_sender = Rails.application.secrets.mailer_sender
 
-  # Change these lines to set your preferred locales
-  config.default_locale = :ca
-  config.available_locales = [:ca, :es]
-
   Decidim::Verifications.register_workflow(:ws_authorization_handler) do |workflow|
     workflow.form = "WsAuthorizationHandler"
   end
@@ -55,12 +51,39 @@ Decidim.configure do |config|
 
   # Time window in which the throttling is applied.
   config.throttling_period = 1.minute
+
+  # Defines the social networking services used for social sharing
+  config.social_share_services = %w(X Facebook WhatsApp Telegram)
+
+  config.content_security_policies_extra = {
+    "default-src" => %w('self' 'unsafe-inline'),
+    "script-src" => %w('self' 'unsafe-inline' 'unsafe-eval'),
+    "style-src" => %w('self' 'unsafe-inline'),
+    "img-src" => %w('self' *.hereapi.com data: *.amazonaws.com),
+    "font-src" => %w('self'),
+    "connect-src" => %w('self' *.hereapi.com *.jsdelivr.net *.amazonaws.com),
+    "frame-src" => %w('self' *.youtube.com),
+    "media-src" => %w('self')
+  }
 end
 
 Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
 Rails.application.config.i18n.default_locale = Decidim.default_locale
+
+Decidim.menu :home_content_block_menu do |menu|
+  # Add a Menu Item for every ParticipatoryProcessGroup in the organization.
+  Decidim::ParticipatoryProcessGroup.where(organization: current_organization)
+                                    .joins(:participatory_processes)
+                                    .uniq
+                                    .each_with_index do |group, index|
+    menu.item translated_attribute(group.title),
+              Decidim::ParticipatoryProcesses::Engine.routes.url_helpers.participatory_process_group_path(group),
+              position: "3.#{index}".to_f,
+              active: :exact
+  end
+end
 
 Decidim.menu :menu do |menu|
 

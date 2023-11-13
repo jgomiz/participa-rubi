@@ -15,8 +15,11 @@ Bundler.require(*Rails.groups)
 module DecidimRubi
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.1
+    config.load_defaults 6.1
 
+    config.i18n.available_locales = %i(ca es)
+    config.i18n.enforce_available_locales = false
+    config.i18n.fallbacks = { es: [:en], ca: [:en]}
 
     # Until disable_dependency_loading is finished we cannot override Decidim behaviour as some of
     # the gems might not have been loaded yet.
